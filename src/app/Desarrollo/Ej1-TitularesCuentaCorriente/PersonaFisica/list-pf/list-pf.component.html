@@ -1,3 +1,42 @@
-<p>
-  list-pf works!
-</p>
+ 
+ 
+<div class="container">
+  <br>
+  <h1>Titulares de cuentas corrientes</h1>
+<hr>
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button (click)="list()" type="button" class="btn btn-outline-dark boton">Actualizar Lista</button>
+    <button (click)="add()" type="button" class="btn btn-outline-dark boton"> Agregar </button>
+  </div>
+</div>
+<br>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>CC</th>
+      <th>RUT</th>
+      <th>Accion</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of persons">
+        <td>{{persona.firstName}}</td>
+        <td>{{persona.lastName}}</td>
+        <td>{{persona.cc}}</td>
+        <td>{{persona.rut}}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-warning" (click)="edit(persona.id)">Editar</button>
+            <button type="button" class="btn btn-danger" (click)="delete(persona)">Eliminar</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button class="btn btn-light" (click)="back()"><-- Volver</button>
+</div>
+
+</div>

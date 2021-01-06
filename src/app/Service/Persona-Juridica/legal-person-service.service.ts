@@ -19,7 +19,6 @@ export class LegalPersonServiceService {
   {
     return this.http.post ( this.endpoint , persona );
   }
-
   
 
   constructor(private http : HttpClient) { }
@@ -31,7 +30,7 @@ export class LegalPersonServiceService {
     return this.http.get ( this.endpoint );
   }
 
-  deleteLegalPerson(id: any) {
+  delete(id: any) {
     return this.http.delete ( this.endpoint + "/" +id );
   }
 }

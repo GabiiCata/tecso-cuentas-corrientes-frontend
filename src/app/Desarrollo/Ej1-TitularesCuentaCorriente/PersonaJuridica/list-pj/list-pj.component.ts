@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LegalPersonServiceService } from 'src/app/Service/Persona-Juridica/legal-person-service.service';
  import Swal from 'sweetalert2';
+ import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-list-pj',
@@ -13,7 +14,10 @@ export class ListPjComponent implements OnInit {
   legalPersons:any = [];
 
 
-  constructor(private service : LegalPersonServiceService ,  private router : Router) { 
+  constructor(
+    private service : LegalPersonServiceService ,  
+    private router : Router,
+    private location : Location) { 
     
   }
   ngOnInit() {
@@ -56,7 +60,7 @@ export class ListPjComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log ( persona )
-        this.service.deleteLegalPerson ( persona.id ).subscribe(data => {
+        this.service.delete ( persona.id ).subscribe(data => {
           this.legalPersons = this.legalPersons.filter ( p=>p!==persona);
           Swal.fire(
             'Elimnado',
@@ -68,4 +72,10 @@ export class ListPjComponent implements OnInit {
       }
     })
   }
+
+  back () 
+  {
+    this.location.back();
+  }
+  
 }

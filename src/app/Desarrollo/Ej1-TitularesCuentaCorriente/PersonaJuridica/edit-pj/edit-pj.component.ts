@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LegalPersonServiceService } from 'src/app/Service/Persona-Juridica/legal-person-service.service';
 import Swal from 'sweetalert2';
 import { PersonaJuridica } from '../model/PersonaJuridica';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-edit-pj',
@@ -13,7 +14,7 @@ export class EditPjComponent implements OnInit {
 
   persona: PersonaJuridica = new PersonaJuridica();
 
-  constructor(private router: Router, private service: LegalPersonServiceService) {
+  constructor(private router: Router, private service: LegalPersonServiceService , private location: Location) {
 
   }
 
@@ -41,6 +42,11 @@ export class EditPjComponent implements OnInit {
         )
         this.router.navigate(["listar-personas-juridicas"]);
       })
+  }
+
+  back () 
+  {
+    this.location.back();
   }
 
 }

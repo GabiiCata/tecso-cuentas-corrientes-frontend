@@ -1,8 +1,9 @@
-<div class="title">
-  <h1>Titulares de cuentas corrientes</h1>
-</div>
-<hr>
+ 
+ 
 <div class="container">
+  <br>
+  <h1>Titulares de cuentas corrientes</h1>
+<hr>
   <div class="btn-group" role="group" aria-label="Basic outlined example">
     <button (click)="list()" type="button" class="btn btn-outline-dark boton">Actualizar Lista</button>
     <button (click)="add()" type="button" class="btn btn-outline-dark boton"> Agregar </button>
@@ -31,4 +32,9 @@
       </tr>
     </tbody>
   </table>
+
+  <div>
+    <button class="btn btn-light" (click)="back()"><-- Volver</button>
+</div>
+
 </div>

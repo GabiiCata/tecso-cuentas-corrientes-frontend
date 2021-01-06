@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountServiceService } from 'src/app/Service/Cuenta/account-service.service';
 import { LegalPersonServiceService } from 'src/app/Service/Persona-Juridica/legal-person-service.service';
-import { ServiceService } from 'src/app/Service/service.service';
 import Swal from 'sweetalert2';
 import { PersonaJuridica } from '../model/PersonaJuridica';
+import { Location } from '@angular/common'
 
 
 @Component({
@@ -14,7 +13,7 @@ import { PersonaJuridica } from '../model/PersonaJuridica';
 export class AddPjComponent implements OnInit {
 
  
-  constructor(  private service: LegalPersonServiceService) {
+  constructor(  private service: LegalPersonServiceService , private location: Location) {
    }
  
   persona:PersonaJuridica=new PersonaJuridica();
@@ -27,7 +26,7 @@ export class AddPjComponent implements OnInit {
       {
         Swal.fire({
            icon: 'success',
-          title: 'Your work has been saved',
+          title: 'Persona agregada correctamente',
           showConfirmButton: false,
           timer: 1500
         })
@@ -40,6 +39,9 @@ export class AddPjComponent implements OnInit {
   ngOnInit() {
    }
 
-
+   back () 
+   {
+     this.location.back();
+   }
 
 }

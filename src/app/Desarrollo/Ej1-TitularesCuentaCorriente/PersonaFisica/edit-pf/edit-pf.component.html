@@ -1,3 +1,36 @@
-<p>
-  edit-pf works!
-</p>
+<br>
+<div class="container col-md-6">
+ <div class="card">
+   <div class="card-header">
+     <h3>Editar Persona Física</h3>
+   </div>
+   <div class="card-body">
+     <form action="">
+
+       <div class="form-group">
+         <label for="firstName">Nombre</label>
+         <input [(ngModel)]="persona.firstName" name="firstName" type="text" class="form-control">
+       </div>
+
+       <div class="form-group">
+         <label for="lastName">Apellido</label>
+         <input [(ngModel)]="persona.lastName" name="lastName" type="text" class="form-control">
+       </div>
+
+       <div class="form-group">
+         <label for="cc">Cuenta Corriente</label>
+         <input [(ngModel)]="persona.cc" name="cc" type="number" class="form-control">
+       </div>
+
+       <div class="form-group">
+         <label for="rut">RUT:</label>
+         <input [(ngModel)]="persona.rut" name="rut" type="number" class="form-control" disabled>
+       </div>
+
+       <button (click)="edit(persona)" class="btn btn-danger">Editar</button>
+       <button (click)="back()" class="btn btn-ligth">Cancelar</button>
+
+     </form>
+   </div>
+ </div>
+</div>
