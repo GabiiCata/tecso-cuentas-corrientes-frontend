@@ -7,6 +7,8 @@ import { environment } from 'src/environments/environment';
 })
 export class LegalPersonServiceService {
 
+  
+
   constructor(private http : HttpClient) { }
 
   endpoint = environment.apiUrl +  "/persona-juridica" ;
@@ -14,5 +16,9 @@ export class LegalPersonServiceService {
   getLegalPersons()
   {
     return this.http.get ( this.endpoint );
+  }
+
+  deleteLegalPerson(id: any) {
+    return this.http.delete ( this.endpoint + "/" +id );
   }
 }

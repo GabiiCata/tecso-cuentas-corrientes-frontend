@@ -23,8 +23,8 @@
         <td>{{legalPerson.rut}}</td>
         <td>
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-warning">Editar</button>
-            <button type="button" class="btn btn-danger">Eliminar</button>
+            <button type="button" class="btn btn-warning" (click)="edit()">Editar</button>
+            <button type="button" class="btn btn-danger" (click)="delete(legalPerson.id)">Eliminar</button>
           </div>
         </td>
       </tr>
