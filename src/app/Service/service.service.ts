@@ -7,12 +7,5 @@ import { environment } from '../../environments/environment';
 })
 export class ServiceService {
 
-  constructor(private http : HttpClient) { }
-
-  endpoint = environment.apiUrl +  "/persona-juridica" ;
-
-  getLegalPerson()
-  {
-     return this.http.get ( this.endpoint );
-  }
+   constructor(){}
 }

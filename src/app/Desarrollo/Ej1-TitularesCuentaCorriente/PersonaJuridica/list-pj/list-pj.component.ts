@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LegalPersonServiceService } from 'src/app/Service/Persona-Juridica/legal-person-service.service';
 import { ServiceService } from 'src/app/Service/service.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class ListPjComponent implements OnInit {
   legalPersons :any;
 
 
-  constructor(private service : ServiceService) { 
+  constructor(private service : LegalPersonServiceService) { 
     
   }
   ngOnInit() {
@@ -21,10 +22,9 @@ export class ListPjComponent implements OnInit {
   }
 
   listPersonas(){
-    this.service.getLegalPerson().subscribe(data=>
+    this.service.getLegalPersons().subscribe(data=>
       {
-        console.log ( data );
-        this.legalPersons = data;
+         this.legalPersons = data;
       }
     )
   }
