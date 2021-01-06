@@ -16,5 +16,10 @@ export class AccountServiceService {
     this.http.get ( this.endpoint );
   }
 
+  add( persona )
+  {
+    return this.http.post ( this.endpoint , persona );
+  }
+
 
 }

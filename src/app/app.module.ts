@@ -24,6 +24,7 @@ import { ListMvComponent } from './Desarrollo/Ej2-CuentasCorrientes/Movimientos/
 import { DesarrolloComponent } from './Desarrollo/desarrollo.component';
  import { LandPageComponent } from './MainComponents/landing-page/land-page.component';
 import { DashboardComponent } from './MainComponents/dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,8 +53,8 @@ import { DashboardComponent } from './MainComponents/dashboard/dashboard.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-     BrowserAnimationsModule  
-     
+     BrowserAnimationsModule  ,
+     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

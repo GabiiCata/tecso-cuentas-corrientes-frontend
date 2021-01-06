@@ -4,10 +4,11 @@
 <hr>
 <div class="container">
   <div class="btn-group" role="group" aria-label="Basic outlined example">
-    <button (click)="listPersonas()" type="button" class="btn btn-outline-primary">Listar</button>
-   </div>
+    <button (click)="list()" type="button" class="btn btn-outline-dark boton">Actualizar Lista</button>
+    <button (click)="add()" type="button" class="btn btn-outline-dark boton"> Agregar </button>
+  </div>
 </div>
-
+<br>
 <div class="container">
   <table class="table table-striped">
     <thead>
@@ -23,8 +24,8 @@
         <td>{{legalPerson.rut}}</td>
         <td>
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-warning" (click)="edit()">Editar</button>
-            <button type="button" class="btn btn-danger" (click)="delete(legalPerson.id)">Eliminar</button>
+            <button type="button" class="btn btn-warning" (click)="edit(legalPerson.id)">Editar</button>
+            <button type="button" class="btn btn-danger" (click)="delete(legalPerson)">Eliminar</button>
           </div>
         </td>
       </tr>

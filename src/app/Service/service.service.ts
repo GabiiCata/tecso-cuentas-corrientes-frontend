@@ -8,4 +8,10 @@ import { environment } from '../../environments/environment';
 export class ServiceService {
 
    constructor(){}
+
+   todayDate(){
+     return new Date().getFullYear;
+   }
+   
+
 }

@@ -18,11 +18,11 @@ export class ListPjComponent implements OnInit {
   }
   ngOnInit() {
 
-   this.listPersonas();
+   this.list();
 
   }
 
-  listPersonas(){
+  list(){
     this.service.getLegalPersons().subscribe(data=>
       {
          this.legalPersons = data;
@@ -32,7 +32,8 @@ export class ListPjComponent implements OnInit {
   
   edit( id )
   {
-    localStorage.setItem('id',id);
+    console.log ( id )
+    localStorage.setItem('id',id ) ;
     this.router.navigate(['editar-persona-juridica']);
   }
 
@@ -44,16 +45,17 @@ export class ListPjComponent implements OnInit {
   delete( persona : any )
   {
     Swal.fire({
-      title: 'Eliminar Persona Juridica',
-      text: "You won't be able to revert this!",
+      title: 'Eliminar a ' + persona.businessName,
+      text: "Esta accion es irrevesible.",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#d33',
+      cancelButtonColor: ' #F0000',
       confirmButtonText: 'Eliminar',
       cancelButtonText : 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
+        console.log ( persona )
         this.service.deleteLegalPerson ( persona.id ).subscribe(data => {
           this.legalPersons = this.legalPersons.filter ( p=>p!==persona);
           Swal.fire(
