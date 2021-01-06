@@ -1,0 +1,34 @@
+<div class="title">
+  <h1>Titulares de cuentas corrientes</h1>
+</div>
+<hr>
+<div class="container">
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button (click)="listPersonas()" type="button" class="btn btn-outline-primary">Listar</button>
+    <button (click)="add()" type="button" class="btn btn-outline-primary">Nuevo</button>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Razon Social</th>
+      <th>Año de fundacion</th>
+      <th>RUT</th>
+      <th>Accion</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let legalPerson of legalPersons">
+        <td>{{legalPerson.businessName}}</td>
+        <td>{{legalPerson.fundationYear}}</td>
+        <td>{{legalPerson.rut}}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-warning">Editar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

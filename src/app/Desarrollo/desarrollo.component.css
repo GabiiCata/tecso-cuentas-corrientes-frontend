@@ -1,0 +1,11 @@
+li:hover{
+    background-color: orangered;
+    color:white;
+    cursor: pointer;
+}
+
+li{
+    color:orangered;
+    font-size: 20px;
+}
+ 

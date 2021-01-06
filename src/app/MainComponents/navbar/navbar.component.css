@@ -1,0 +1,16 @@
+.tecso-navbar{
+    padding: 1%;
+}
+
+h1,h3{
+    font-weight: lighter;
+}
+
+.title-navbar{
+    color: orangered
+}
+
+.title-navbar:hover{
+    color: #f1926f;
+    border-bottom-style: outset;
+}
