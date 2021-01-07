@@ -14,7 +14,10 @@ export class EditPjComponent implements OnInit {
 
   persona: PersonaJuridica = new PersonaJuridica();
 
-  constructor(private router: Router, private service: LegalPersonServiceService , private location: Location) {
+  constructor(
+    private router: Router, 
+    private service: LegalPersonServiceService , 
+    private location: Location) {
 
   }
 
@@ -40,7 +43,7 @@ export class EditPjComponent implements OnInit {
           persona.businessName + ' fue actualizado con éxito.',
           'success'
         )
-        this.router.navigate(["listar-personas-juridicas"]);
+        this.location.back();
       })
   }
 

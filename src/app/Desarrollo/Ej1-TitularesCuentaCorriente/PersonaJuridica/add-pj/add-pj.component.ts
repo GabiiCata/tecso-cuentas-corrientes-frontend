@@ -13,7 +13,9 @@ import { Location } from '@angular/common'
 export class AddPjComponent implements OnInit {
 
  
-  constructor(  private service: LegalPersonServiceService , private location: Location) {
+  constructor(  
+    private service: LegalPersonServiceService , 
+    private location: Location) {
    }
  
   persona:PersonaJuridica=new PersonaJuridica();

@@ -13,6 +13,8 @@ import { AddCuentaComponent } from './Desarrollo/Ej2-CuentasCorrientes/Cuenta/ad
 import { DeleteCuentaComponent } from './Desarrollo/Ej2-CuentasCorrientes/Cuenta/delete-cuenta/delete-cuenta.component';
 import { EditCuentaComponent } from './Desarrollo/Ej2-CuentasCorrientes/Cuenta/edit-cuenta/edit-cuenta.component';
 import { ListCuentaComponent } from './Desarrollo/Ej2-CuentasCorrientes/Cuenta/list-cuenta/list-cuenta.component';
+import { AddMvComponent } from './Desarrollo/Ej2-CuentasCorrientes/Movimientos/add-mv/add-mv.component';
+import { ListMvComponent } from './Desarrollo/Ej2-CuentasCorrientes/Movimientos/list-mv/list-mv.component';
 import { DashboardComponent } from './MainComponents/dashboard/dashboard.component';
 import { LandPageComponent } from './MainComponents/landing-page/land-page.component';
 import { ModeladoComponent } from './Modelado/modelado.component';
@@ -38,8 +40,8 @@ const routes: Routes = [
   {path:'editar-cuenta', component: EditCuentaComponent},
   {path:'eliminar-cuenta', component: DeleteCuentaComponent},
 
-  {path:'listar-cuentas', component: ListPfComponent},
-  {path:'agregar-cuenta', component: AddPfComponent},
+  {path:'listar-movimientos', component: ListMvComponent},
+  {path:'agregar-movimiento', component: AddMvComponent},
   
 ];
 

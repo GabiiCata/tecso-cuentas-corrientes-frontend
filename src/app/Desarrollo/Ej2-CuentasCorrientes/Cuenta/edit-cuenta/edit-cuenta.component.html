@@ -1,3 +1,26 @@
-<p>
-  edit-cuenta works!
-</p>
+<br>
+<div class="container col-md-6">
+ <div class="card">
+   <div class="card-header">
+     <h3>Agrear Cuenta</h3>
+   </div>
+   <div class="card-body">
+     <form action="">
+       <div class="form-group">
+         <label for="accountNumber">Numero de cuenta:</label>
+         <input [(ngModel)]="cuenta.accountNumber" name="accountNumber" type="number" class="form-control" disabled>
+       </div>
+       <div class="form-group">
+         <label for="currency">Moneda:</label>
+         <input [(ngModel)]="cuenta.currency" name="currency" type="text" class="form-control">
+       </div>
+       <div class="form-group">
+         <label for="balance">Saldo:</label>
+         <input [(ngModel)]="cuenta.balance" name="balance" type="number" class="form-control">
+       </div>
+       <button (click)="edit(cuenta)" class="btn btn-warning">Editar</button>
+       <button (click)="back()" class="btn btn-light">Cancelar</button>
+      </form>
+   </div>
+ </div>
+</div>
