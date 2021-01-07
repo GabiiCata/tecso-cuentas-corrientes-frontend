@@ -1,6 +1,6 @@
 export class Movimiento{
     id:number;
-    date:String;
+    date:Date;
     movementType:String;
     amount: number;
     originAccountNumber: number;

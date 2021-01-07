@@ -1,3 +1,38 @@
-<p>
-  list-mv works!
-</p>
+<div class="container">
+  <br>
+  <h1>Movimientos de cuenta : {{cuentaId}}</h1>
+  <hr>
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button (click)="list()" type="button" class="btn btn-outline-dark boton">Actualizar Lista</button>
+    <button (click)="add()" type="button" class="btn btn-outline-dark boton"> Agregar </button>
+  </div>
+</div>
+<br>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Fecha</th>
+      <th>Tipo</th>
+      <th>Monto</th>
+      <th>Cuenta Origen</th>
+      <th>Cuenta Destino</th>
+      <th>Descripcion</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movement of movements">
+        <td>{{movement.date}}</td>
+        <td>{{movement.movementType}}</td>
+        <td>$ {{movement.amount}}</td>
+        <td>{{movement.originAccountNumber}}</td>
+        <td>{{movement.destinationAccountNumber}}</td>
+        <td>{{movement.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button class="btn btn-light" (click)="back()">
+      <-- Volver</button>
+  </div>
+
+</div>

@@ -21,10 +21,10 @@
       <tr *ngFor="let account of accounts">
         <td>{{account.accountNumber}}</td>
         <td>{{account.currency}}</td>
-        <td>{{account.balance}}</td>
+        <td>$ {{account.balance}}</td>
         <td>
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-secondary" (click)="movements(account.id)">Ver Movimientos</button>
+            <button type="button" class="btn btn-secondary" (click)="movements(account.id)">Ver movimientos</button>
           </div>
         </td>
 

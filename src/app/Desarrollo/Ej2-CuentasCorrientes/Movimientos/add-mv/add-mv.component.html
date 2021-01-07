@@ -1,3 +1,40 @@
-<p>
-  add-mv works!
-</p>
+<br>
+<div class="container col-md-6">
+ <div class="card">
+   <div class="card-header">
+     <h3>Nuevo movimiento</h3>
+   </div>
+   <div class="card-body">
+     <form action="">
+       <div class="form-group">
+         <label for="originAccountNumber">Cuenta Origen: </label>
+         <input [(ngModel)]="movement.originAccountNumber" name="originAccountNumber" type="number" class="form-control" disabled>
+       </div>
+
+       <div class="form-group">
+        <label for="destinationAccountNumber">Cuenta Destino: </label>
+        <input [(ngModel)]="movement.destinationAccountNumber" name="destinationAccountNumber" type="number" class="form-control">
+      </div>
+
+       <div class="form-group">
+         <label for="movementType">Tipo de movimiento:</label>
+         <input [(ngModel)]="movement.movementType" name="movementType" type="text" class="form-control">
+       </div>
+
+       <div class="form-group">
+         <label for="amount">Monto:</label>
+         <input [(ngModel)]="movement.amount" name="amount" type="number" class="form-control">
+       </div>
+
+       <div class="form-group">
+        <label for="description">Descipcion:</label>
+        <input [(ngModel)]="movement.description" name="description" type="text" class="form-control">
+      </div>
+
+
+       <button (click)="add(movement)" class="btn btn-warning">Agregar</button>
+       <button (click)="back()" class="btn btn-light">Cancelar</button>
+      </form>
+   </div>
+ </div>
+</div>
