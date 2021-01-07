@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ListMvComponent } from './list-mv.component';
 
@@ -6,7 +6,7 @@ describe('ListMvComponent', () => {
   let component: ListMvComponent;
   let fixture: ComponentFixture<ListMvComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ListMvComponent ]
     })

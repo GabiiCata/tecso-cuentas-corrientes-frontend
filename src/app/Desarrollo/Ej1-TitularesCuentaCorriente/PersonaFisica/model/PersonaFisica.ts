@@ -3,5 +3,5 @@ export class PersonaFisica{
     firstName: String;
     lastName: String;
     cc: String;
-    rut:  number
+    rut:  number;
 }
